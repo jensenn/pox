@@ -251,6 +251,7 @@ class SoftwareSwitchBase (object):
     self._has_sent_hello = False
     connection.set_message_handler(self.rx_message)
     self._connection = connection
+    self.send_hello()
 
   def send (self, message, connection = None):
     """
